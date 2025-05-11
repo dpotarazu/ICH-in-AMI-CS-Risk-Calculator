@@ -48,7 +48,7 @@ for factor, pts in risk_factors.items():
 # Define function for risk mapping
 def get_risk(score):
     if score <= 5:
-        return "0.52%", "Low"
+        return "0.53%", "Low"
     elif score <= 10:
         return "1.96%", "Moderate"
     elif score <= 15:
