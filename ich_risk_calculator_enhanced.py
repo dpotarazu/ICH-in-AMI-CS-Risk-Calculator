@@ -88,4 +88,5 @@ for bar, risk in zip(bars, risks):
     height = bar.get_height()
     ax.text(bar.get_x() + bar.get_width() / 2, height + 0.5, f"{risk}%", ha='center', va='bottom')
 
+plt.subplots_adjust(top=0.85)
 st.pyplot(fig)
