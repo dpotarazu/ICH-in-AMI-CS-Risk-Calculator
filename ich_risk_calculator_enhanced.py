@@ -72,21 +72,29 @@ elif category == "High":
 else:
     st.error(f"Very High Risk of ICH: {risk_percent}")
 
-# Optional: show a bar chart of score vs risk
+# Improved bar chart with more space and clean annotations
 st.markdown("### 🔍 Risk Probability by Score Range")
-fig, ax = plt.subplots()
+
+fig, ax = plt.subplots(figsize=(6, 6))  # Taller figure = more space
 score_ranges = ["0–5", "6–10", "11–15", ">15"]
 risks = [0.52, 1.96, 7.97, 22.91]
 
-bars = ax.bar(score_ranges, risks)
+bars = ax.bar(score_ranges, risks, color="#1f77b4")
 ax.set_ylabel("ICH Risk (%)")
 ax.set_xlabel("Total Score Range")
 ax.set_title("Estimated ICH Risk by Score Category")
 
-# Add percentage labels above each bar
+# Annotate percentages above bars with extra spacing
 for bar, risk in zip(bars, risks):
     height = bar.get_height()
-    ax.text(bar.get_x() + bar.get_width() / 2, height + 0.5, f"{risk}%", ha='center', va='bottom')
+    ax.text(
+        bar.get_x() + bar.get_width() / 2,
+        height + 1.5,
+        f"{risk}%",
+        ha='center',
+        va='bottom',
+        fontsize=10
+    )
 
-plt.subplots_adjust(top=0.85)
+plt.ylim(0, 28)  # Extend y-axis for headroom
 st.pyplot(fig)
