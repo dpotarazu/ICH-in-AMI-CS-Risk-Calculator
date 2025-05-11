@@ -23,7 +23,7 @@ with st.expander("ℹ️ About this Score"):
     - **Acute kidney injury (AKI)** = 1 point  
     - **Age < 65 years** = 1 point  
 
-    The total score maps to predicted ICH risk levels.
+    The total score maps to predicted ICH risk.
     """)
 
 # Define risk factors and associated points
@@ -77,8 +77,15 @@ st.markdown("### 🔍 Risk Probability by Score Range")
 fig, ax = plt.subplots()
 score_ranges = ["0–5", "6–10", "11–15", ">15"]
 risks = [0.52, 1.96, 7.97, 22.91]
-ax.bar(score_ranges, risks)
+
+bars = ax.bar(score_ranges, risks)
 ax.set_ylabel("ICH Risk (%)")
 ax.set_xlabel("Total Score Range")
 ax.set_title("Estimated ICH Risk by Score Category")
+
+# Add percentage labels above each bar
+for bar, risk in zip(bars, risks):
+    height = bar.get_height()
+    ax.text(bar.get_x() + bar.get_width() / 2, height + 0.5, f"{risk}%", ha='center', va='bottom')
+
 st.pyplot(fig)
