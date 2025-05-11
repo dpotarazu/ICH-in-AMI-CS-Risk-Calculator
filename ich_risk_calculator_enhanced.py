@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 st.set_page_config(page_title="ICH Risk Calculator", layout="wide")
 
 # App title and intro
-st.title("ICHcal Risk Calculator for Intracanial Hemorrhage in AMI-CS")
-st.markdown("Use the ICHcal risk calculator to estimate intracranial hemorrhage (ICH) risk in patients with acute myocardial infarction complicated by cardiogenic shock (AMI-CS).")
+st.title("ICHcal Prediction Score for Intracanial Hemorrhage Risk in AMI-CS")
+st.markdown("Use the ICHcal prediction score to estimate intracranial hemorrhage (ICH) risk in patients with acute myocardial infarction complicated by cardiogenic shock (AMI-CS).")
 
 # Display an expandable information section
 with st.expander("ℹ️ About this Score"):
