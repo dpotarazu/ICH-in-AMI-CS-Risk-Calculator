@@ -1,4 +1,3 @@
-
 import streamlit as st
 import matplotlib.pyplot as plt
 
@@ -77,7 +76,7 @@ st.markdown("### 🔍 Risk Probability by Score Range")
 
 fig, ax = plt.subplots(figsize=(6, 6))  # Taller figure = more space
 score_ranges = ["0–5", "6–10", "11–15", ">15"]
-risks = [0.52, 1.96, 7.97, 22.91]
+risks = [0.53, 1.96, 7.97, 22.91]  # <- Updated first value here
 
 bars = ax.bar(score_ranges, risks, color="#1f77b4")
 ax.set_ylabel("ICH Risk (%)")
