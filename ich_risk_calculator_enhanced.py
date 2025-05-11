@@ -7,12 +7,12 @@ st.set_page_config(page_title="ICH Risk Calculator", layout="wide")
 
 # App title and intro
 st.title("ICH Risk Score Calculator for AMI-CS")
-st.markdown("Use this tool to estimate intracranial hemorrhage (ICH) risk in patients with acute myocardial infarction complicated by cardiogenic shock (AMI-CS) based on clinical variables.")
+st.markdown("Use this tool to estimate intracranial hemorrhage (ICH) risk in patients with acute myocardial infarction complicated by cardiogenic shock (AMI-CS).")
 
 # Display an expandable information section
 with st.expander("ℹ️ About this Score"):
     st.write("""
-    This scoring system estimates the risk of intracranial hemorrhage (ICH) in patients with AMI-CS using the following factors:
+    This scoring system estimates the risk of intracranial hemorrhage (ICH) in patients with AMI-CS using the following variables:
 
     - **VA-ECMO** = 9 points  
     - **Acute ischemic stroke** = 5 points  
