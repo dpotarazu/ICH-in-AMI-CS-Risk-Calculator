@@ -97,5 +97,3 @@ for bar, risk in zip(bars, risks):
 
 plt.ylim(0, 28)  # Extend y-axis for headroom
 st.pyplot(fig)
-
-git checkout -b update-aki-score
