@@ -19,7 +19,7 @@ with st.expander("ℹ️ About this Score"):
     - **Microaxial MCS (e.g., Impella)** = 2 points  
     - **Sepsis** = 2 points  
     - **Thrombolysis** = 2 points  
-    - **Acute kidney injury (AKI)** = 1 point  
+    - **Acute kidney injury (AKI)** = 2 point  
     - **Age < 65 years** = 1 point  
 
     The total score maps to predicted ICH risk.
@@ -33,7 +33,7 @@ risk_factors = {
     "Microaxial MCS (e.g., Impella)": 2,
     "Sepsis": 2,
     "Thrombolysis": 2,
-    "Acute kidney injury (AKI)": 1,
+    "Acute kidney injury (AKI)": 2,
     "Age < 65 years": 1
 }
 
@@ -97,3 +97,5 @@ for bar, risk in zip(bars, risks):
 
 plt.ylim(0, 28)  # Extend y-axis for headroom
 st.pyplot(fig)
+
+git checkout -b update-aki-score
